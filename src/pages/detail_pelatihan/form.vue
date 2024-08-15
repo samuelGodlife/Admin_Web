@@ -64,7 +64,7 @@
                     <div class="col">
                     <q-input
                         filled
-                        v-model="form.linkYoutobe"
+                        v-model="form.linkYoutube"
                         label="Link Youtube"
                         lazy-rules
                         dense
@@ -110,7 +110,7 @@ export default {
         namaPelatihan: null,
         judulMateri: null,
         isiMateri: null,
-        linkYoutobe: null,
+        linkYoutube: null,
       },
       LISTKATEGORI: [], // Define LISTKATEGORI as a reactive data property
       oldImg: null,
@@ -134,8 +134,9 @@ export default {
               console.log(res.data)
               const data = res.data.data
               this.form.namaPelatihan = data.namaPelatihan
-              this.form.deskripsi = data.deskripsi
-              this.image = data.gambar
+              this.form.judulMateri = data.judulMateri
+              this.form.isiMateri = data.isiMateri
+              this.form.linkYoutube = data.linkYoutube
             }
           })
       } catch (e) {
@@ -209,10 +210,10 @@ export default {
             namaPelatihan: this.form.namaPelatihan,
             judulMateri: this.form.judulMateri,
             isiMateri:  this.form.isiMateri,
-            linkYoutube: this.form.linkYoutobe,
+            linkYoutube: this.form.linkYoutube,
           }).then(res => {
             if (res.data.status !== true) {
-              console.log(formData)
+              // console.log(formData)
               this.$q.notify({
                 message: 'Gagal Edit Data',
                 color: 'red'

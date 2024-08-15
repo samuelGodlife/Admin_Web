@@ -2,7 +2,8 @@
 import { boot } from "quasar/wrappers";
 import axios from "axios";
 
-const baseURL = "https://backendrumahbumn-production.up.railway.app";
+const baseURL = "http://localhost:4000";
+// const baseURL = "https://backendrumahbumn-production.up.railway.app";
 const api = axios.create({ baseURL: baseURL });
 
 export default boot(({ app, router }) => {

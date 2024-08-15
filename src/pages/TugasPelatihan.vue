@@ -120,8 +120,7 @@ export default {
             } else {
               const data = res.data.data
               this.file = data.file
-              this.url = "http://localhost:4000/gambar-sertifikat/"+this.file
-              console.log("INI FILE SETAN")
+              this.url = "https://backendrumahbumn-production.up.railway.app/gambar-sertifikat/"+this.file
               console.log(this.url)
               const fileName = 'your-pdf-file.pdf';
               this.downloadFile(this.url, data.jenis_surat);

@@ -72,7 +72,7 @@
 
                       <q-td key="aksi" :props="props">
                         <q-btn round outline color="red" size="sm" icon="delete" @click="this.delete(props.row._id)" no-caps class="q-ml-sm" />
-                        <q-btn round outline color="green" size="sm" icon="edit" :to="{ name:'edit_kategori', params:{ id: props.row._id } }"  class="q-ml-sm" no-caps />
+                        <q-btn round outline color="green" size="sm" icon="edit" :to="{ name:'edit_materi', params:{ id: props.row._id } }"  class="q-ml-sm" no-caps />
                       </q-td>
                     </q-tr>
                   </template>
